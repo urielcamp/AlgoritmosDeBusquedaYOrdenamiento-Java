@@ -8,7 +8,7 @@ public class Main {
         //Algoritmo de ordenamiento burbuja
 
 
-        int [] arr = {12, 3, 45, 32, 47, 75, 49, 463, 2};
+        int [] arr = {12, 32, 45, 3, 47, 75, 49, 463, 2};
 
 
 
@@ -23,7 +23,39 @@ public class Main {
         }
 
         for (int x: arr){
-            System.out.print(x + " , ");
+            System.out.print(x + ", ");
         }
+
+
+        //Ejercicio 2
+        //Algoritmo de ordenamiento por seleccion
+
+        int [] arraySort = {21, 2, 23, 445, 64, 33, 65, 26, 66};
+
+        for(int i = 0; i < arraySort.length - 1; i++ ){
+            int minIndex = i;
+            for (int k = i + 1; k < arraySort.length; k++){
+                if(arraySort[k] < arraySort[minIndex]){
+                    minIndex = k;
+
+                }
+            }
+            int aux = arraySort[minIndex];
+            arraySort[minIndex] = arraySort[i];
+            arraySort[i] = aux;
+        }
+        System.out.println();
+
+        for (int a: arraySort){
+            System.out.print(a + ", ");
+        }
+
+        System.out.println();
+
+
+
+
+
+
     }
 }

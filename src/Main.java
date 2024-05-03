@@ -1,5 +1,7 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -53,7 +55,34 @@ public class Main {
         System.out.println();
 
 
+        //Ejercicio 3
+        //Algoritmo de busqueda binaria
 
+        int [] arrBi = {123,2342,31,42,5,63,75};
+
+
+        Arrays.sort(arrBi);
+        int[] arrBinaria = Arrays.copyOf(arrBi, arrBi.length);
+
+        int valorBuscado = 31;
+        int derecha = arrBinaria.length - 1;
+        int izquierda = 0;
+
+
+        while (izquierda <= derecha){
+            int medio = (izquierda + derecha)/2;
+            if (valorBuscado == arrBinaria[medio]){
+                System.out.println("el valor buscado esta en la posicion: " + medio);
+                break;
+            }
+
+            if (valorBuscado> arrBinaria[medio]){
+                izquierda = medio + 1;
+            }else {
+                derecha = medio - 1;
+            }
+
+        }
 
 
 

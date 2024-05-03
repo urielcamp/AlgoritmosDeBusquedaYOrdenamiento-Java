@@ -83,6 +83,30 @@ public class Main {
             }
 
         }
+        System.out.println();
+
+        //Ejercicio 4
+        //Ordenamiento por Inserción (Insertion Sort)
+
+        int [] arrSort = {12, 23, 42, 3, 2, 41, 53, 98, 65};
+
+        for (int i = 0; i < arrSort.length - 1; i++){
+            int minIndex = i;
+            for (int l = i + 1; l < arrSort.length; l++ ){
+                if (arrSort[l]< arrSort[minIndex]){
+                    minIndex=l;
+                }
+            }
+            int aux = arrSort[minIndex];
+            arrSort[minIndex] = arrSort[i];
+            arrSort[i] = aux;
+        }
+
+        for (int y: arrSort){
+            System.out.print(y + ", ");
+        }
+
+
 
 
 
